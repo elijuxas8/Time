@@ -1,15 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
-    margin: 0;
-    padding: 20px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
 h1 {
     color: #4CAF50;
+    margin-bottom: 20px;
 }
 
 input[type="time"] {
@@ -18,6 +26,7 @@ input[type="time"] {
     margin: 10px 0;
     border: 2px solid #ddd;
     border-radius: 5px;
+    width: 150px;
 }
 
 button {
