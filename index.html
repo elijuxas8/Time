@@ -1,17 +1,80 @@
-
 <!DOCTYPE html>
 <html lang="lt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dienos Progreso Skaičiavėjas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0D1B2A; /* Tamsiai mėlynas fonas */
+            color: #333; /* Juodas tekstas */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .calculator {
+            background-color: #fff; /* Balta skaičiuoklė */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        h1 {
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        input[type="time"] {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px 0;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #result {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #333;
+        }
+    </style>
 </head>
 <body>
-    <h1>Dienos progreso skaičiavimas</h1>
-    <label for="timeInput">Įveskite laiką (HH:MM):</label>
-    <input type="time" id="timeInput">
-    <button onclick="calculateProgress()">Skaičiuoti procentą</button>
-    <p id="result"></p>
+    <div class="calculator">
+        <h1>Dienos progreso skaičiavimas</h1>
+        <label for="timeInput">Įveskite laiką (HH:MM):</label>
+        <input type="time" id="timeInput">
+        <button onclick="calculateProgress()">Skaičiuoti procentą</button>
+        <p id="result"></p>
+    </div>
 
     <script>
         function calculateProgress() {
